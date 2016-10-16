@@ -36,7 +36,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="">My Wishlist</a>
+            <a href="/wishlist.html">My Wishlist</a>
           </li>
           <li>
             <a href="">My Library</a>
@@ -59,16 +59,14 @@
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
         <i class="fa fa-star-o"></i>
-        <p><b>Cost:</b> 600 Bookmarks</p>
         <hr/>
         <p>Panem is split up into 12 districts. Each year, every district is forced to randomly choose two tributes--one girl and one boy--to fight in the annual Hunger Games. A fight to the death on live television. Katniss Everdeen takes her sister's place when she is called to be the tribute of the 74th annual Hunger Games.</p>
-        <p><b>This book is unavailable right now. Add it to your library if you own it.</b></p>
         <div class="row">
           <div class="col-sm-3">
-            <button class="btn btn-block btn-default">
-              <i class="fa fa-plus"></i>
-              Add to my library
-            </button>
+            <button class="btn btn-block btn-success">
+              <i class="fa fa-check"></i>
+              This book is in your library
+						</button>
           </div>
         </div>
       </div>
@@ -89,16 +87,26 @@
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
-        <p><b>Cost:</b> 750 Bookmarks</p>
         <hr/>
         <p>Catching Fire is a 2009 science fiction young adult novel by the American novelist Suzanne Collins, the second book in The Hunger Games trilogy. As the sequel to the 2008 bestseller The Hunger Games, it continues the story of Katniss Everdeen and the post-apocalyptic nation of Panem. Following the events of the previous novel, a rebellion against the oppressive Capitol has begun, and Katniss and fellow tribute Peeta Mellark are forced to return to the arena in a special edition of the Hunger Games.</p>
-        <div class="row">
-          <div class="col-sm-3">
-            <button class="btn btn-block btn-success">
-              <i class="fa fa-check"></i>
-              This book is in your library
-						</button>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <a class="btn btn-block btn-primary">
+            <i class="fa fa-gift"></i>
+            Add to Wishlist
+          </a>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn btn-block btn-default" id="hungerGames">
+            <i class="fa fa-plus"></i>
+            Add to my library
+          </button>
+        </div>
+        <div class="col-sm-3">
+          <a class="btn btn-block btn-default" href="https://www.amazon.com/Catching-Fire-Hunger-Games-2/dp/0545586178/ref=sr_1_2?ie=UTF8&qid=1476632014&sr=8-2&keywords=catching+fire">
+            Want it Now? Buy off Amazon
+          </a>
         </div>
       </div>
     </div>
@@ -117,24 +125,28 @@
         <i class="fa fa-star"></i>
         <i class="fa fa-star-o"></i>
         <i class="fa fa-star-o"></i>
-        <p><b>Cost:</b> 500 Bookmarks</p>
         <hr/>
         <p>Catching Fire is a 2009 science fiction young adult novel by the American novelist Suzanne Collins, the second book in The Hunger Games trilogy. As the sequel to the 2008 bestseller The Hunger Games, it continues the story of Katniss Everdeen and the post-apocalyptic nation of Panem. Following the events of the previous novel, a rebellion against the oppressive Capitol has begun, and Katniss and fellow tribute Peeta Mellark are forced to return to the arena in a special edition of the Hunger Games.</p>
         <p><b>This book is available now. Click add to wish list.</b></p>
         <p><b>Own this book? Add it to your library if you are willing to part with it.</b></p>
         <div class="row">
           <div class="col-sm-3">
-            <a class="btn btn-block btn-primary">
+            <a class="btn btn-block btn-primary" id="mockingJayWish">
               <i class="fa fa-gift"></i>
               Add to Wishlist
             </a>
           </div>
           <div class="col-sm-3">
-            <button class="btn btn-block btn-default">
+            <button class="btn btn-block btn-default" id="mockingJayLib">
               <i class="fa fa-plus"></i>
               Add to my library
             </button>
           </div>
+        <div class="col-sm-3">
+          <a class="btn btn-block btn-default" href="https://www.amazon.com/Mockingjay-Hunger-Games-Suzanne-Collins/dp/0545663261/ref=sr_1_2?ie=UTF8&qid=1476632078&sr=8-2&keywords=mockingjay">
+            Want it Now? Buy off Amazon
+          </a>
+        </div>
         </div>
       </div>
     </div>
@@ -147,6 +159,25 @@
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
+
+  <script>
+  $('#hungerGames').click(function(e) {
+    $('#hungerGames').attr('class', 'btn btn-block btn-success');
+    $('#hungerGames').empty();
+    $('#hungerGames').append('<i class="fa fa-check"></i>This book is in your library')
+  });
+
+  $('#mockingJayWish').click(function(e) {
+    $('#mockingJayWish').empty();
+    $('#mockingJayWish').append('<i class="fa fa-check"></i>This book is on your wishlist')
+  });
+
+  $('#mockingJayLib').click(function(e) {
+    $('#mockingJayLib').attr('class', 'btn btn-block btn-success');
+    $('#mockingJayLib').empty();
+    $('#mockingJayLib').append('<i class="fa fa-check"></i>This book is in your library')
+  });
+  </script>
   
 </body>
 
